@@ -30,9 +30,9 @@ _start:
 
     pop rax
 
-    test rcx, rcx
-    jnz .loop
+    test rcx, rcx ; performs a logical and of two operands and sets the SF, ZF and PF flags 
+    jnz .loop ; jump if not zero -> ZF flag
 
-    mov rax, 60
+    mov rax, 60 ; ends the program
     xor rdi, rdi
     syscall
